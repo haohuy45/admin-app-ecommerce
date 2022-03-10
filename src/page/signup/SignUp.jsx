@@ -42,7 +42,7 @@ export default function SignUp() {
   }
   return (
     <Layout>
-      <Container className="signup-container">
+      <div className="signup-container">
         {user.message}
         <Row style={{ marginTop: "50px" }}>
           <Col md={{ span: 6, offset: 3 }}>
@@ -91,7 +91,7 @@ export default function SignUp() {
             </Form>
           </Col>
         </Row>
-      </Container>
+      </div>
     </Layout>
   )
 }

@@ -12,7 +12,6 @@ import { NavLink } from "react-router-dom";
 export default function Home() {
   return (
     <div className="home">
-      <Layout sidebar></Layout>
       <div className="home-content">
         <FeaturedInfo />
         <Chart data={data} title="Thống kê doanh số" grid dataKey="Tiền" />

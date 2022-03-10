@@ -28,8 +28,7 @@ export default function SignIn(props) {
   }
   return (
     <div className="signin">
-      <Layout>
-        <Container className="signin-container">
+        <div className="signin-container">
           <Row>
             <Col md={{ span: 6, offset: 3 }}>
               <Form onSubmit={userLogin}>
@@ -54,8 +53,7 @@ export default function SignIn(props) {
               </Form>
             </Col>
           </Row>
-        </Container>
-      </Layout>
+        </div>
     </div>
   );
 }

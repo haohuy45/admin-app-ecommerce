@@ -22,6 +22,7 @@ import { Product } from './page/product/Product';
 import { Order } from './page/order/Order';
 import { Category } from './page/category/Category';
 import Header from './components/header/Header';
+import MainLayout from './components/layout/MainLayout.jsx'
 
 function App() {
   const dispatch = useDispatch();
@@ -35,22 +36,50 @@ function App() {
 
   }, [])
   return (
+    // <>
+    //   <Header />
+    //   <div className='container-fluid'>
+    //     {/* <Sidebar /> */}
+    //     <Routes>
+    //       <Route exact path='/' element={<PrivateRoute />}>
+    //         <Route exact path='/' element={<Home />} /> 
+    //       </Route>
+    //       <Route exact path='/products' element={<PrivateRoute />}>
+    //         <Route exact path='/products' element={<Product />} />
+    //       </Route>
+    //       <Route path='/orders' element={<PrivateRoute />}>
+    //         <Route path='/orders' element={<Order />} />
+    //       </Route>
+    //       <Route exact path='/category' element={<PrivateRoute />}>
+    //         <Route exact path='/category' element={<Category />} />
+    //       </Route>
+    //       <Route path='/users' element={<UserList />} />
+    //       <Route path='/user/:userId' element={<User />} />
+    //       <Route path='/newUser' element={<NewUser />} />
+    //       <Route path='/products' element={<ProductList />} />
+    //       <Route path='/product/:productId' element={<NewUser />} />
+    //       <Route path='/newUser' element={<NewUser />} />
+    //       <Route path='/signin' element={<SignIn />} />
+    //       <Route path='/signup' element={<SignUp />} />
+
+    //     </Routes>
+    //   </div>
+    // </>
     <>
-      <Header/>
-      <div className='container-fluid'>
-        {/* <Sidebar /> */}
-        <Routes>
-        <Route exact path='/' element={<PrivateRoute />}>
+    <Header/>
+      <Routes>
+        <Route path='/' element={<MainLayout />}>
+          <Route exact path='/' element={<PrivateRoute />}>
             <Route exact path='/' element={<Home />} />
           </Route>
           <Route exact path='/products' element={<PrivateRoute />}>
-            <Route exact path='/products' element={<Product/>} />
+            <Route exact path='/products' element={<Product />} />
           </Route>
           <Route path='/orders' element={<PrivateRoute />}>
-            <Route path='/orders' element={<Order/>} />
+            <Route path='/orders' element={<Order />} />
           </Route>
           <Route exact path='/category' element={<PrivateRoute />}>
-            <Route exact path='/category' element={<Category/>} />
+            <Route exact path='/category' element={<Category />} />
           </Route>
           <Route path='/users' element={<UserList />} />
           <Route path='/user/:userId' element={<User />} />
@@ -60,9 +89,9 @@ function App() {
           <Route path='/newUser' element={<NewUser />} />
           <Route path='/signin' element={<SignIn />} />
           <Route path='/signup' element={<SignUp />} />
-          
-        </Routes>
-      </div>
+
+        </Route>
+      </Routes>
     </>
   );
 }

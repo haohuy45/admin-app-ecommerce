@@ -1,0 +1,42 @@
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+*:before, *:after {
+    content: '';
+    display: block;
+    position: absolute;
+}
+
+ul {
+    list-style: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.app-container{
+    margin-top: 56px;
+    display: flex;
+    flex: auto;
+    min-height: 100%;
+    position: relative;
+}
+
+.container{
+    width: 100%;
+    height: auto;
+    margin-left: 230px;
+}
+
+main {
+    flex: 1 1;
+    height: 100vh;
+  }
