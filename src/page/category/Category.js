@@ -12,6 +12,7 @@ export const Category = () => {
     const [categoryImage, setCategoryImage] = useState('');
     const dispatch = useDispatch();
     useEffect(() => {
+        dispatch(getAllCategory())
     }, []);
 
     // useEffect(() => {
@@ -82,7 +83,6 @@ export const Category = () => {
     return (
         <div className='category'>
             <div className='category-content'>
-                <Container>
                     <Row>
                         <Col md={12}>
                             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -99,7 +99,6 @@ export const Category = () => {
                             </ul>
                         </Col>
                     </Row>
-                </Container>
                 <Modal show={show} onHide={handleClose}>
                     <Modal.Header closeButton>
                         <Modal.Title>Add New Category</Modal.Title>
