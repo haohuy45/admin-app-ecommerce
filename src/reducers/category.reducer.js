@@ -1,4 +1,4 @@
-import { categoryConstants } from "../actions/constants";
+import { categoryConstants } from "../constants";
 
 const initState = {
     categories: [],

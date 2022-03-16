@@ -41,7 +41,6 @@ export default function SignUp() {
     return <p>Loading...</p>
   }
   return (
-    <Layout>
       <div className="signup-container">
         {user.message}
         <Row style={{ marginTop: "50px" }}>
@@ -92,6 +91,5 @@ export default function SignUp() {
           </Col>
         </Row>
       </div>
-    </Layout>
   )
 }

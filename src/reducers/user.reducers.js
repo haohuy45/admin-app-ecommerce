@@ -1,4 +1,5 @@
-import { userConstants } from "../actions/constants";
+import { userConstants } from "../constants";
+
 
 const initState = {
     error: null,
@@ -13,6 +14,7 @@ export default (state = initState, action) => {
                 ...state,
                 loading: true
             }
+
             break;
         case userConstants.USER_REGISTER_SUCCESS:
             state = {
@@ -20,6 +22,7 @@ export default (state = initState, action) => {
                 loading: false,
                 message: action.payload.message
             }
+
             break;
         case userConstants.USER_REGISTER_FAILURE:
             state = {
@@ -27,6 +30,7 @@ export default (state = initState, action) => {
                 loading: false,
                 message: action.payload.error
             }
+
             break;
 
     }

@@ -1,8 +1,13 @@
 .product{
     display: flex;
-    margin-top: 57px;
+    margin-top: 25px;
     width: 100%;
 }
 .product-content{
     flex: 4;
+}
+
+.product-content-header{
+    display: flex;
+    justify-content: space-between;
 }

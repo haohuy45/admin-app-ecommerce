@@ -6,6 +6,7 @@ import "./signin.css";
 import {login} from '../../actions'
 import { useDispatch, useSelector } from "react-redux";
 import {Navigate} from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 export default function SignIn(props) {
   const [email, setEmail] = useState('');
@@ -16,7 +17,7 @@ export default function SignIn(props) {
 
   const dispatch = useDispatch()
 
-  const userLogin = (e) => {
+  const userLogin = async(e) => {
     e.preventDefault();
     const user = {
       email, password

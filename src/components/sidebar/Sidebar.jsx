@@ -135,12 +135,12 @@ export default function Sidebar() {
             </div>
             <ul>
               <li>
-                <NavLink to="/list">
+                <NavLink to="/product">
                   <span>Tất Cả Sản Phẩm</span>
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/wallet">
+                <NavLink to="/product/add">
                   <span>Thêm Sản Phẩm</span>
                 </NavLink>
               </li>

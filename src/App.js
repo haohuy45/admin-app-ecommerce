@@ -72,8 +72,8 @@ function App() {
           <Route exact path='/' element={<PrivateRoute />}>
             <Route exact path='/' element={<Home />} />
           </Route>
-          <Route exact path='/products' element={<PrivateRoute />}>
-            <Route exact path='/products' element={<Product />} />
+          <Route exact path='/product' element={<PrivateRoute />}>
+            <Route exact path='/product' element={<Product />} />
           </Route>
           <Route path='/orders' element={<PrivateRoute />}>
             <Route path='/orders' element={<Order />} />
@@ -84,13 +84,12 @@ function App() {
           <Route path='/users' element={<UserList />} />
           <Route path='/user/:userId' element={<User />} />
           <Route path='/newUser' element={<NewUser />} />
-          <Route path='/products' element={<ProductList />} />
+          {/* <Route path='/product' element={<ProductList />} /> */}
           <Route path='/product/:productId' element={<NewUser />} />
           <Route path='/newUser' element={<NewUser />} />
-          <Route path='/signin' element={<SignIn />} />
-          <Route path='/signup' element={<SignUp />} />
-
         </Route>
+        <Route path='/signin' element={<SignIn />} />
+          <Route path='/signup' element={<SignUp />} />
       </Routes>
     </>
   );

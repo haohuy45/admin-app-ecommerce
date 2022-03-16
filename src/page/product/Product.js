@@ -60,18 +60,21 @@ export const Product = () => {
 
   return (
     <div className='product'>
-      <Layout sidebar></Layout>
       <div className="product-content">
-        <Container>
-          <Row>
+        {/* <Container> */}
+          {/* <Row>
             <Col md={12}>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <h3>Product</h3>
                 <button onClick={handleShow}>Add</button>
               </div>
             </Col>
-          </Row>
-        </Container>
+          </Row> */}
+        {/* </Container> */}
+        <div className='product-content-header'>
+          <h3>Product</h3>
+          <button onClick={handleShow}>Add</button>
+        </div>
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>Add New Product</Modal.Title>

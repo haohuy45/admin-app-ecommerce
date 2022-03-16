@@ -1,5 +1,8 @@
-import { authConstants } from "./constants";
+import { authConstants } from "../constants";
 import axios from '../helpers/axios';
+import { alertActions } from "./alert.actions";
+import { toast } from 'react-toastify';
+
 
 export const login = (user) => {
     console.log(user);
@@ -18,12 +21,16 @@ export const login = (user) => {
                     token, user
                 }
             })
+            toast.success('Đăng nhập thành công!');
+
         } else {
             if (res.status === 400) {
+                toast.error('Đăng nhập thất bại!');
                 dispatch({
                     type: authConstants.LOGIN_FAILURE,
                     payload: { error: res.data.error }
                 })
+
             }
         }
     }
@@ -61,12 +68,16 @@ export const signout = () => {
         if (res.status === 200) {
             localStorage.clear();
             dispatch({type: authConstants.LOGOUT_SUCCESS})
+            toast.success('Đăng xuất thành công!');
+
         } else {
             dispatch({
                 type: authConstants.LOGOUT_FAILURE,
                 payload: {error: res.data.error}
                 
             })
+            toast.error('Đăng xuất thất bại!');
+
 
         }
     }

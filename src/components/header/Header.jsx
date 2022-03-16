@@ -106,7 +106,7 @@ export default function Header() {
               <NotificationsNoneIcon className="header-action-icon" />
             </div>
             <div className="header-icon-menu ">
-              <SettingsIcon className="header-action" />
+              <SettingsIcon className="header-action-icon" />
             </div>
           </div>
         </div>

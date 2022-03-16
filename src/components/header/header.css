@@ -47,3 +47,11 @@
 .header-notification{
     margin-right: 5px;
 }
+
+.header-btn .nav-item .nav-link{
+    cursor: pointer;
+}
+
+.header-action-icon{
+    cursor: pointer;
+}

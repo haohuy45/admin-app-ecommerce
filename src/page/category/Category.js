@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Col, Container, Row, Modal, Button } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import { addCategory, getAllCategory } from '../../actions'
-import { Layout } from '../../components/layout'
-import './category.css'
 import {Input} from '../../components/input/Input.jsx'
 
 export const Category = () => {
@@ -83,9 +81,6 @@ export const Category = () => {
     }
     return (
         <div className='category'>
-            <Layout sidebar>
-
-            </Layout>
             <div className='category-content'>
                 <Container>
                     <Row>
