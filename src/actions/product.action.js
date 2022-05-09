@@ -21,19 +21,45 @@ const getProducts = () => {
     };
   };
 
-export const addProduct = form => {
-    return async (dispatch) => {
-        try {
-          dispatch({ type: productConstants.ADD_PRODUCT_REQUEST });
-          const res = await axios.post(`product/create`, form);
+// export const addProduct = form => {
+//     return async (dispatch) => {
+//         try {
+//           dispatch({ type: productConstants.ADD_PRODUCT_REQUEST });
+//           const res = await axios.post(`/product/create`, form);
+//           if (res.status === 201) {
+//             dispatch({ type: productConstants.ADD_PRODUCT_SUCCESS });
+//             dispatch(getProducts());
+//           } else {
+//             dispatch({ type: productConstants.ADD_PRODUCT_FAILURE });
+//           }
+//         } catch (error) {
+//           console.log(error);
+//         }
+//       };
+// }
+
+export const addProduct = (form) => {
+  return async dispatch => {
+      dispatch({
+          type: productConstants.ADD_NEW_PRODUCT_REQUEST
+      });
+      try {
+          const res = await axios.post(`/product/create`, form);
           if (res.status === 201) {
-            dispatch({ type: productConstants.ADD_PRODUCT_SUCCESS });
-            dispatch(getProducts());
+              dispatch({
+                  type: productConstants.ADD_NEW_PRODUCT_SUCCESS,
+                  payload: { product: res.data.product }
+              });
           } else {
-            dispatch({ type: productConstants.ADD_PRODUCT_FAILURE });
+              dispatch({
+                  type: productConstants.ADD_NEW_PRODUCT_FAILURE,
+                  payload: res.data.error
+
+              })
           }
-        } catch (error) {
-          console.log(error);
-        }
-      };
+      } catch (error) {
+          console.log(error.response);
+      }
+
+  }
 }

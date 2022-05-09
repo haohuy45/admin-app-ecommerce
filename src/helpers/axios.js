@@ -6,7 +6,7 @@ console.log(token)
 
 const axiosInstance = axios.create({
     baseURL:api,
-    header: {
+    headers: {
         'Authorization': token ? `Bearer ${token}`: ''
     }
 

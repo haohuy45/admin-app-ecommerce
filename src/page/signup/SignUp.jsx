@@ -1,7 +1,7 @@
 
 import React, {useState, useEffect} from 'react'
 import { Col, Container, Row, Form, Button } from 'react-bootstrap'
-import { Input } from '../../components/input/Input'
+import { Input } from '../../components/UI/input/Input'
 import { Layout } from '../../components/layout'
 import './signup.css';
 import { Navigate } from 'react-router-dom';
@@ -18,14 +18,14 @@ export default function SignUp() {
   const user = useSelector(state => state.user);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    if (!user.loading) {
-      setFirstName("");
-      setLastName("");
-      setEmail("");
-      setPassword("");
-    }
-  }, [user.loading]);
+  // useEffect(() => {
+  //   if (!user.loading) {
+  //     setFirstName("");
+  //     setLastName("");
+  //     setEmail("");
+  //     setPassword("");
+  //   }
+  // }, [user.loading]);
 
   const userSignup = (e) => {
     e.preventDefault();

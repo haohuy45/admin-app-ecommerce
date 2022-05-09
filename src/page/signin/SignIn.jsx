@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
-import { Input } from "../../components/input/Input";
+import { Input } from "../../components/UI/input/Input";
 import { Layout } from "../../components/layout";
 import "./signin.css";
 import {login} from '../../actions'

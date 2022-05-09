@@ -165,3 +165,49 @@ export const productRows = [
     price: "$120.00",
   },
 ];
+
+export const sidebarMenus = [
+  { 
+    name: 'Vận Chuyển', 
+    subMenus: [
+      {name: 'Quản Lý Vận Chuyển', to: '/shipment'}, 
+      {name: 'Giao Hàng Loạt', to: '/shipment'}, 
+      {name: 'Cài Đặt Vận Chuyển', to: '/shipment'}]
+  },
+  { 
+    name: 'Quản Lý Đơn Hàng',
+    subMenus: [
+      {name: 'Tất Cả', to: '/order'}, 
+      {name: 'Đơn Hủy', to: '/order'},
+      {name: 'Trả Hàng Hoàn Tiền', to: '/order'}
+    ]
+  },
+  {
+    name: 'Quản Lý Sản Phẩm',
+    subMenus: [
+      {name: 'Tất Cả Sản Phẩm', to : '/product'}, 
+      {name: 'Thêm Sản Phẩm', to : '/product'}
+    ]
+  },
+  {
+    name: 'Quản Lý Danh Mục',
+    subMenus: [
+      {name: 'Tất Cả Danh Mục', to : '/category'}, 
+      {name: 'Thêm Danh Mục', to : '/category'}
+    ]
+  },
+  {
+    name: 'Quản Lý Khách Hàng',
+    subMenus: [
+      {name: 'Tất Cả Khách Hàng', to : '/user'}, 
+      {name: 'Thêm Khách Hàng', to : '/user'}
+    ]
+  },
+  {
+    name: 'Tài Chính',
+    subMenus: [
+      {name: 'Doanh Thu', to: '/sale'}
+    ]
+  }
+
+]

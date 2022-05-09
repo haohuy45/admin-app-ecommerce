@@ -20,6 +20,7 @@ html, body {
 
 a{
     text-decoration: none;
+    color: #000;
 }
 
 .app-container{
@@ -39,4 +40,5 @@ a{
 main {
     flex: 1 1;
     height: 100vh;
+    padding: 0px 20px 0px 52px;
   }
